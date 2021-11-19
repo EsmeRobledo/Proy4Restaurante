@@ -2,9 +2,8 @@ import React from 'react'
 import Icon1 from '../../images/dinein.svg'
 import Icon2 from '../../images/takeout1.svg'
 import Icon3 from '../../images/delivery1.svg'
-import { Button } from '../ButtonElement'
 import { ServicesContainer, ServicesH1, ServicesWrapper, ServicesCard, ServicesIcon, 
-    ServicesH2, ServicesP, BtnWrap, ServiceReserv } from './ServicesElements';
+    ServicesH2, ServicesP, BtnWrap, ServiceReserv, ServiceBtn } from './ServicesElements';
 function Services() {
     return (
         <>
@@ -29,7 +28,7 @@ function Services() {
                     </ServicesCard>
                 </ServicesWrapper>
                     <BtnWrap>
-                          <Button to='home' smooth={true} duration={500} spy={true} exact="true" offset={-80} primary={true} dark={true} dark2={false}>Back Home</Button>
+                          <ServiceBtn to='home' smooth={true} duration={500} spy={true} exact="true" >Back Home</ServiceBtn>
                     </BtnWrap>
             </ServicesContainer>
         </>

@@ -1,5 +1,8 @@
 import React from 'react'
-import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper, FooterLinkItems, FooterLinkTitle, FooterLink, FooterTime,FooterInfo } from './FooterElements';
+import { FaFacebook, FaInstagram, FaTwitter, FaYelp } from 'react-icons/fa';
+import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper,
+     FooterLinkItems, FooterLinkTitle, FooterLink, FooterTime,FooterInfo, SocialMedia, SocialMediaWrap,
+     SocialLogo, WebsiteRightd, SocialIcons, SocialIconLink } from './FooterElements';
 
 function Footer() {
     return (
@@ -10,32 +13,29 @@ function Footer() {
                         <FooterLinksWrapper>
                             <FooterLinkItems>
                                 <FooterLinkTitle>En nuestro Sitio</FooterLinkTitle>
-                                    <FooterLink to="/signin">Reservaciones</FooterLink>
-                                    <FooterLink to="/signin">Testimonios</FooterLink>
-                                    <FooterLink to="/signin">Galeria</FooterLink>
-                                    <FooterLink to="/signin">Menu</FooterLink>
+                                    <FooterLink to="/reservations">Reservaciones</FooterLink>
+                                    <FooterLink to="/testimonials">Testimonios</FooterLink>
+                                    <FooterLink to="/galery">Galeria</FooterLink>
+                                    <FooterLink to="/menu">Menu</FooterLink>
                            </FooterLinkItems>
-                        </FooterLinksWrapper>
-                        <FooterLinksWrapper>
+                       
                             <FooterLinkItems>
                                 <FooterLinkTitle>Social Media</FooterLinkTitle>
-                                    <FooterLink to="/signin">Facebool</FooterLink>
-                                    <FooterLink to="/signin">Instagram</FooterLink>
-                                    <FooterLink to="/signin">Twitter</FooterLink>
-                                    <FooterLink to="/signin">Yelp</FooterLink>
+                                    <FooterLink to="/">Facebook</FooterLink>
+                                    <FooterLink to="/">Instagram</FooterLink>
+                                    <FooterLink to="/">Twitter</FooterLink>
+                                    <FooterLink to="/">Yelp</FooterLink>
                            </FooterLinkItems>
-                        </FooterLinksWrapper>
-                        <FooterLinksWrapper>
-                            <FooterLinkItems>
+                           </FooterLinksWrapper>
+                           <FooterLinksWrapper>
+                           <FooterLinkItems>
                                 <FooterLinkTitle>Informacion</FooterLinkTitle>
                                     <FooterInfo>Reservaciones</FooterInfo>
                                     <FooterInfo>(916)-841-8886</FooterInfo>
                                     <FooterInfo>Calle S 2065, Guanajuato 98541 </FooterInfo>
                                     <FooterInfo>ramenhouse@gmail.com</FooterInfo>
                            </FooterLinkItems>
-                        </FooterLinksWrapper>
-                        <FooterLinksWrapper>
-                            <FooterLinkItems>
+                           <FooterLinkItems>
                                 <FooterLinkTitle>Horarios</FooterLinkTitle>
                                     <FooterTime>Lunes a Sabado</FooterTime>
                                     <FooterTime>11:30 AM - 7:30 PM</FooterTime>
@@ -44,6 +44,20 @@ function Footer() {
                            </FooterLinkItems>
                         </FooterLinksWrapper>
                     </FooterLinksContainer>
+                    <SocialMedia>
+                        <SocialMediaWrap>
+                            <SocialLogo to="/">
+                                RamenHouse
+                            </SocialLogo>
+                            <WebsiteRightd>RamenHouse © {new Date().getFullYear()} All rights reserved.</WebsiteRightd>
+                            <SocialIcons>
+                                <SocialIconLink href="/" target="_blank" arial-label="Facebook"><FaFacebook/></SocialIconLink>
+                                <SocialIconLink href="/" target="_blank" arial-label="Instagram"><FaInstagram/></SocialIconLink>
+                                <SocialIconLink href="/" target="_blank" arial-label="Twitter"><FaTwitter/></SocialIconLink>
+                                <SocialIconLink href="/" target="_blank" arial-label="Yelp"><FaYelp/></SocialIconLink>
+                            </SocialIcons>
+                        </SocialMediaWrap>
+                    </SocialMedia>
                 </FooterWrap>
             </FooterContainer>
         </>

@@ -16,23 +16,23 @@ function Navigation({toggle}){
                     </MobileIcon>
                     <NavMenu>
                     <NavItem>
-                            <NavLinks to="/Aboutus">About us</NavLinks>
+                            <NavLinks to='Aboutus'>Conocenos</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to="menu">Menu</NavLinks>
+                            <NavLinks to='/Menu'>Menu</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to="/Services">Services</NavLinks>
+                            <NavLinks to='Services'>Servicios</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to="/Reserv">Reservaciones</NavLinks>
+                            <NavLinks to='/reservations'>Reservaciones</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to="/Singup">Sign up</NavLinks>
+                            <NavLinks to='/signup'>Sing up</NavLinks>
                        </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink to="/Singin">Sign In</NavBtnLink>
+                        <NavBtnLink to='/signin'>Sign In</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>

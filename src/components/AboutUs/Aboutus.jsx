@@ -3,7 +3,7 @@ import { Button } from '../ButtonElement'
 import Icon2 from '../../images/homemade-ramen.jpg'
 import {AboutusContainer, AboutusWrapper, AboutusRow,Column1, 
     Column2, TextWrapper, TopLine, ImgWrap, 
-    Heading, Subtitle, BtnWrap,Img } from '../AboutUs/AboutusElement'
+    Heading, Subtitle, BtnWrap,Img } from './AboutusElement'
 
 
 const Aboutus = ({lightBg, id, imgStart, topLine, lightText, darkText, 

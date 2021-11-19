@@ -6,6 +6,7 @@ export const Nav = styled.nav`
 background: #000;
 height: 80px;
 display: flex;
+margin-top: -60px;
 justify-content: center;
 align-items: center;
 font-size: 15px;
@@ -25,21 +26,21 @@ z-index: 1;
 width: 100%;
 padding: 0 24px;
 max-width: 1100px;
-`;
+`
 
 export const NavLogo = styled(LinkR)`
-color: red;
-justify-self: flex-start;
-cursor: pointer;
-font-size: 24px;
-display: flex;
-align-items: center;
-font-family: 'Yuji Boku', serif;
-margin-left: 24px;
-margin-top: 10px
-font-weight: bold;
-text-decoration: none;
-`;
+    color: red;
+    justify-self: flex-start;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    font-family: 'Yuji Boku', serif;
+    margin-left: 24px;
+    margin-top: 10px
+    font-weight: bold;
+    text-decoration: none;
+`
 
 export const MobileIcon = styled.div`
 display: none;
@@ -56,15 +57,15 @@ display: none;
     }
 `
 export const NavMenu = styled.ul`
-display: flex;
-align-items: center;
-list-style: none;
-text-align: center;
-font-family: 'Abril Fatface', cursive;
-    @media screen and (max-width: 768px){
-        display: none;
-    }
-`;
+    display: flex;
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+        @media screen and (max-width: 768px){
+            display: none;
+        }
+`
 
 export const NavItem = styled.li`
 height: 80px;
