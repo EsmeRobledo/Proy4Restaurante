@@ -28,9 +28,9 @@ export const DishCard = styled.div`
 `
 
 export const DishImg = styled.img`
- height: 300px;
- min-width: 300px;
- max-width: 100%
+ height: 250px;
+ min-width: 250px;
+ max-width: 75%
  box-shadow: 8px 8px #fdc500;
 `
 

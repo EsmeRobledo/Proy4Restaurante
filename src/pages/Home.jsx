@@ -20,7 +20,7 @@ const Home = () => {
           <Sidebar isOpen={isOpen} toggle={toggle}/>
           <Navigation toggle={toggle} />  
           <PresentationHome />
-          <Menu {...productData}/>
+          <Menu data={productData}/>
           <Aboutus {...homeObjOne}/>
           <Services/>
           <Footer />
