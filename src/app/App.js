@@ -2,9 +2,10 @@ import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
 import { Switch } from 'react-router';
 import Home from '../pages/Home';
-import Signin from '../pages/Signin'
-import Menu from '../components/Menu/Menu'
+import Signin from '../pages/Signin';
+import Menu from '../components/Menu/Menu';
 import Reservations from '../components/Reservations/Reservations';
+import Signup from '../components/Signup/Signup';
 
 
 
@@ -16,6 +17,7 @@ function App() {
        <Route path="/signin" component={Signin} exact />
        <Route path="/menu"  component={Menu} exact  />
        <Route path="/reservaciones" component={Reservations} exact />
+       <Route path="/signup" component={Signup} exact />
      </Switch>
     </Router>
   );
