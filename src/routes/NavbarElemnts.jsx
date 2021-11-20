@@ -3,7 +3,7 @@ import {Link as LinkR}  from 'react-router-dom'
 import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
-background: #000;
+background: ${({scrollNav}) => (scrollNav ? 'Transparent' : '#020202')};
 height: 80px;
 display: flex;
 margin-top: -60px;
@@ -81,7 +81,14 @@ export const NavLinks = styled(LinkS)`
     cursor: poiter;
 
     &.active{
+       /*Cambiara el color de la linea inferior al momento de activar el menu seleccionado*/
         border-bottom: 3px splid red;
+    }
+
+    &:hover{
+        transition: all 0.2s ease-in-out;
+        border:red;
+        color: #010606;
     }
 `;
 
@@ -89,6 +96,7 @@ export const NavBtn = styled.nav`
     display: flex;
     align-items: center;
     font-family: 'Abril Fatface', cursive;
+
     @media screen and (max-width: 768px){
         display:none;
     }

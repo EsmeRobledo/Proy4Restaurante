@@ -1,10 +1,14 @@
 import React from 'react'
+import { animateTopScroll as scroll } from 'react-scroll';
 import { FaFacebook, FaInstagram, FaTwitter, FaYelp } from 'react-icons/fa';
 import { FooterContainer, FooterWrap, FooterLinksContainer, FooterLinksWrapper,
      FooterLinkItems, FooterLinkTitle, FooterLink, FooterTime,FooterInfo, SocialMedia, SocialMediaWrap,
      SocialLogo, WebsiteRightd, SocialIcons, SocialIconLink } from './FooterElements';
 
 function Footer() {
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    }
     return (
         <>
              <FooterContainer>
@@ -46,7 +50,7 @@ function Footer() {
                     </FooterLinksContainer>
                     <SocialMedia>
                         <SocialMediaWrap>
-                            <SocialLogo to="/">
+                            <SocialLogo to="/" onClick={toggleHome}>
                                 RamenHouse
                             </SocialLogo>
                             <WebsiteRightd>RamenHouse © {new Date().getFullYear()} All rights reserved.</WebsiteRightd>

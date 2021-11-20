@@ -6,6 +6,8 @@ import Services from '../components/Services/Services'
 import { Navigation } from '../routes/Navigation'
 import { Sidebar } from '../routes/Sidebar/Sidebar'
 import {homeObjOne} from '../components/Aboutus/Data'
+import {productData} from '../components/Menu/Data'
+import Menu from '../components/Menu/Menu'
 
 
 const Home = () => {
@@ -18,6 +20,7 @@ const Home = () => {
           <Sidebar isOpen={isOpen} toggle={toggle}/>
           <Navigation toggle={toggle} />  
           <PresentationHome />
+          <Menu {...productData}/>
           <Aboutus {...homeObjOne}/>
           <Services/>
           <Footer />
