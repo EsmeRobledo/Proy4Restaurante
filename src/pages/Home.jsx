@@ -6,7 +6,7 @@ import Services from '../components/Services/Services'
 import { Navigation } from '../routes/Navigation'
 import { Sidebar } from '../routes/Sidebar/Sidebar'
 import {homeObjOne} from '../components/Aboutus/Data'
-import {productData} from '../components/Menu/Data'
+
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -16,7 +16,7 @@ const Home = () => {
   return (
         <>
           <Sidebar isOpen={isOpen} toggle={toggle}/>
-          <Navigation toggle={toggle} data={productData} />  
+          <Navigation toggle={toggle} />  
           <PresentationHome />
           <Aboutus {...homeObjOne}/>
           <Services/>

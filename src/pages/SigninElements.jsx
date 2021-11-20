@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
 
 export const Container = styled.div`
     min-height: 692px;
@@ -23,12 +23,17 @@ export const FormWrap = styled.div`
         }
 `
 export const Icon = styled(Link)`
-        margin-left: 32px;
-        margin-top: 32px
-        text-decoration: none;
-        color: #EF5350;
-        font-weight: 700;
-        font-size: 32px;
+  color: red;
+  justify-self: flex-start;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  font-family: 'Yuji Boku', serif;
+  margin-left: 24px;
+  margin-top: 10px
+  font-weight: bold;
+  text-decoration: none;
 
         @media screen and (max-width: 480px){
             margin-left: 16px;

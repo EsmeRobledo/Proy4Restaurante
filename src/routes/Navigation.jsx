@@ -36,7 +36,7 @@ function Navigation({toggle,productData}){
                             <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-60} >Conocenos</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinksR to='/menu' data={productData}>Menu</NavLinksR>
+                            <NavLinksR to='/menu' >Menu</NavLinksR>
                        </NavItem>
                        <NavItem>
                             <NavLinks to='Services' smooth={true} duration={500} spy={true} exact='true' offset={-60}>Servicios</NavLinks>

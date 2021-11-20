@@ -1,14 +1,46 @@
 import React from 'react'
-
+import {productData, drinksData, dessertData} from '../Menu/Data'
 import {MenuContainer, MenuHeadding, ProductsWrap, DishCard, 
-    DishImg, DishInfo, DishTitle, DishDesc, DishPrice} from '../Menu/MenuElements'
+    DishImg, DishInfo, DishTitle, DishDesc, DishPrice, Icon} from '../Menu/MenuElements'
 
-    const Menu = ({data}) => {
-        return (
-          <MenuContainer>
+  function Menu() {
+       return (
+         <>
+         <MenuContainer>
+         <Icon to="/">Ramen House</Icon>
             <MenuHeadding>Elige tu platillo favorito</MenuHeadding>
             <ProductsWrap>
-              {data.map((product, index) => {
+              {productData.map((product, index) => {
+                return (
+                  <DishCard key={index}>
+                    <DishImg src={product.img} alt={product.alt} />
+                    <DishInfo>
+                      <DishTitle>{product.name}</DishTitle>
+                      <DishDesc>{product.desc}</DishDesc>
+                      <DishPrice>{product.price}</DishPrice>
+                    </DishInfo>
+                  </DishCard>
+                );
+              })}
+            </ProductsWrap>
+            <MenuHeadding>Nuestros Postres</MenuHeadding>
+            <ProductsWrap>
+              {dessertData.map((product, index) => {
+                return (
+                  <DishCard key={index}>
+                    <DishImg src={product.img} alt={product.alt} />
+                    <DishInfo>
+                      <DishTitle>{product.name}</DishTitle>
+                      <DishDesc>{product.desc}</DishDesc>
+                      <DishPrice>{product.price}</DishPrice>
+                    </DishInfo>
+                  </DishCard>
+                );
+              })}
+            </ProductsWrap>
+            <MenuHeadding>Bebidas</MenuHeadding>
+            <ProductsWrap>
+              {drinksData.map((product, index) => {
                 return (
                   <DishCard key={index}>
                     <DishImg src={product.img} alt={product.alt} />
@@ -22,7 +54,7 @@ import {MenuContainer, MenuHeadding, ProductsWrap, DishCard,
               })}
             </ProductsWrap>
           </MenuContainer>
-        );
-      };
-      
+       </>
+        )
+     }
       export default Menu;
