@@ -2,11 +2,13 @@ import React, {useState, useEffect} from "react";
 import {animateScroll as scroll} from 'react-scroll'
 import {Nav, NavbarContainer, NavLogo, 
     MobileIcon, 
-    NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink} from "./NavbarElemnts"
+    NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink, NavLinksR} from "./NavbarElemnts"
     import { FaBars } from 'react-icons/fa'
 
+   
 
-function Navigation({toggle}){
+
+function Navigation({toggle,productData}){
     const [scrollNav, setScroolNav] = useState(false)
     const changeNav = ()=> {
         if(window.scrollY >= 80){
@@ -34,16 +36,16 @@ function Navigation({toggle}){
                             <NavLinks to='about' smooth={true} duration={500} spy={true} exact='true' offset={-60} >Conocenos</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to='/menu'>Menu</NavLinks>
+                            <NavLinksR to='/menu' data={productData}>Menu</NavLinksR>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to='/Services' smooth={true} duration={500} spy={true} exact='true' offset={-60}>Servicios</NavLinks>
+                            <NavLinks to='Services' smooth={true} duration={500} spy={true} exact='true' offset={-60}>Servicios</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to='reservations'>Reservaciones</NavLinks>
+                            <NavLinksR to='/reservaciones'>Reservaciones</NavLinksR>
                        </NavItem>
                        <NavItem>
-                            <NavLinks to='signup'>Sing up</NavLinks>
+                            <NavLinksR to='/signup'>Sing up</NavLinksR>
                        </NavItem>
                     </NavMenu>
                     <NavBtn>

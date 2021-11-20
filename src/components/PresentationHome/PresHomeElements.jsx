@@ -38,8 +38,7 @@ export const HomeBg = styled.div`
 
 export const VideoBg = styled.video`
     width: 100%;
-    height: 100%
-    -o-object-fit: cover;
+    height: 100%;
     object-fit: cover;
     background: #232a34;
 
@@ -59,7 +58,7 @@ export const Homeh1 = styled.h1`
     color: white;
     font-size: 48px;
     text-align: center;
-    margin-top: 44px;
+    margin-top: 80px;
     font-family: 'Yuji Boku', serif;
     @media screen and (max-width: 768px){
         font-size: 40px;

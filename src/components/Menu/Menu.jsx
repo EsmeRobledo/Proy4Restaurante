@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 import {MenuContainer, MenuHeadding, ProductsWrap, DishCard, 
     DishImg, DishInfo, DishTitle, DishDesc, DishPrice} from '../Menu/MenuElements'
 

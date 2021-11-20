@@ -3,10 +3,10 @@ import {Link as LinkR}  from 'react-router-dom'
 import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
-background: ${({scrollNav}) => (scrollNav ? 'Transparent' : '#020202')};
+background: ${({scrollNav}) => (scrollNav ? 'black' : '#020202')};
 height: 80px;
 display: flex;
-margin-top: -60px;
+margin-top: -80px;
 justify-content: center;
 align-items: center;
 font-size: 15px;
@@ -85,11 +85,7 @@ export const NavLinks = styled(LinkS)`
         border-bottom: 3px splid red;
     }
 
-    &:hover{
-        transition: all 0.2s ease-in-out;
-        border:red;
-        color: #010606;
-    }
+   
 `;
 
 export const NavBtn = styled.nav`
@@ -101,6 +97,23 @@ export const NavBtn = styled.nav`
         display:none;
     }
 `;
+export const NavLinksR = styled(LinkR)`
+    color: #fff;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: poiter;
+
+    &.active{
+    /*Cambiara el color de la linea inferior al momento de activar el menu seleccionado*/
+        border-bottom: 3px splid red;
+    }
+
+   
+`
+
 export const NavBtnLink = styled(LinkR)`
     background: red;
     padding: 10px 20px;

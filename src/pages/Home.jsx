@@ -7,8 +7,6 @@ import { Navigation } from '../routes/Navigation'
 import { Sidebar } from '../routes/Sidebar/Sidebar'
 import {homeObjOne} from '../components/Aboutus/Data'
 import {productData} from '../components/Menu/Data'
-import Menu from '../components/Menu/Menu'
-
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -18,9 +16,8 @@ const Home = () => {
   return (
         <>
           <Sidebar isOpen={isOpen} toggle={toggle}/>
-          <Navigation toggle={toggle} />  
+          <Navigation toggle={toggle} data={productData} />  
           <PresentationHome />
-          <Menu data={productData}/>
           <Aboutus {...homeObjOne}/>
           <Services/>
           <Footer />
