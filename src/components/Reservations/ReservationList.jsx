@@ -18,8 +18,9 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet
         setEdit();
     }
 
-    const handleClickE = (values) => {
+    const clickHandler = (values) => {
         deleteId(values.id)
+        //values.deleteData(values.data[values.id]);
         setDelet();
     }
 
@@ -48,7 +49,7 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet
                         <td>{reserva.nopersonas}</td>
                         <td>
                             <TiEdit variant="warning" onClick={() => handleClick(reserva)} className='edit-icon'/> 
-                            <TiDelete variant="warning" onClick={() => handleClickE(reserva)} className='delete-icon' />
+                            <TiDelete variant="warning" onClick={() => clickHandler(reserva)} className='delete-icon' />
                         </td>
                     </tr>
                 ))}

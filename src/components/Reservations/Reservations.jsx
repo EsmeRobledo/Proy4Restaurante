@@ -37,13 +37,12 @@ const Reservations= () => {
     }
 
     const removeReserva = async (id, values) => {
-        if (window.confirm('Aceptar?')) {
-            delete(doc(db, 'reservations', id), values)
-            reservas.filter(values => values.id !== id);
-            alert('Se ha Eliminado la Reserva');
-        }
-        updatedelet(false)
-        setReservation(reservas)
+       //delete(doc(db, 'reservations', id), values)
+      // db.database().ref(`reservations`).remove();
+       //reservas.filter(values => values.id !== id);
+       alert('Se ha Eliminado la Reserva');
+       updatedelet(false)
+       setReservation(reservas)
     }
 
     const onSave = (values) => {
