@@ -1,6 +1,5 @@
 import React from 'react'
 import { Card, Table } from 'react-bootstrap'
-import { RiCloseCircleLine } from 'react-icons/ri';
 import { TiDelete, TiEdit } from 'react-icons/ti';
 
 const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet, deleteId}) => {
@@ -49,7 +48,7 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet
                         <td>{reserva.nopersonas}</td>
                         <td>
                             <TiEdit variant="warning" onClick={() => handleClick(reserva)} className='edit-icon'/> 
-                            <TiDelete onClick={() => handleClickE(reserva)} className='delete-icon' />
+                            <TiDelete variant="warning" onClick={() => handleClickE(reserva)} className='delete-icon' />
                         </td>
                     </tr>
                 ))}

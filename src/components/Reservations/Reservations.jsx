@@ -108,20 +108,20 @@ const Reservations= () => {
                                     <FormInput type='text' required value={formData.apellido} name="apellido" onChange={onChange}/>
                                
                                     <FormLabel >Email:</FormLabel>
-                                    <FormInput type='text' required value={formData.email} name="email" onChange={onChange}/>
+                                    <FormInput type='email' required value={formData.email} name="email" onChange={onChange}/>
                                
                                     <FormLabel >Telefono:</FormLabel>
                                     <FormInput type='text' required value={formData.telefono} name="telefono" onChange={onChange}/>
                                
                                     <FormLabel >Fecha:</FormLabel>
-                                    <FormInput type='text' required value={formData.fecha} name="fecha" onChange={onChange}/>
+                                    <FormInput type='date' required value={formData.fecha} name="fecha" onChange={onChange}/>
                                 
                                     <FormLabel>Hora:</FormLabel>
-                                    <FormInput type='text' required value={formData.hora} name="hora" onChange={onChange}/>
+                                    <FormInput type='time' required value={formData.hora} name="hora" onChange={onChange}/>
                                
                                 
                                     <FormLabel>Numero de Personas:</FormLabel>
-                                    <FormInput  type='text' required value={formData.nopersonas} name="nopersonas" onChange={onChange}/>
+                                    <FormInput  type='number' required value={formData.nopersonas} name="nopersonas" onChange={onChange}/>
                                 
                                 <FormButtom  variant="primary" type='submit'>Agendar Reservacion</FormButtom>
                                 <Text>**Para cancelacion de reservaciones favor de realizarla minimo 1 hora antes de la hora indicada</Text>

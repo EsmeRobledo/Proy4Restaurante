@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 import {HomeContainer, HomeBg, VideoBg, Homecontent, 
-    Homeh1, HomeP, HomeBtnWrapper, ArrowForward, ArrowRight} from './PresHomeElements'
+    Homeh1, HomeP, HomeBtnWrapper, ArrowForward, ArrowRight, Button} from './PresHomeElements'
 import Video from '../../videos/video.mp4'
-import { Button } from '../ButtonElement'
+
 
 const PresentationHome = () => {
     const [hover, setHover] = useState(false);
@@ -21,7 +21,7 @@ const PresentationHome = () => {
                       Nuestro menu se ha convertido en la especialidad de muchos conocedores.
                       Estaremos muy agradecidos en contar con tu visita y comentar como te sientes al degustar nuestros platillos.</HomeP>
              <HomeBtnWrapper>
-                <Button to='Signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
+                <Button to='/reservaciones' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
                     Reserva ahora {hover ? <ArrowForward/> : <ArrowRight/>}
                 </Button>
              </HomeBtnWrapper>   

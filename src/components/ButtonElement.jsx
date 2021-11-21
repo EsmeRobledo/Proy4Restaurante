@@ -23,3 +23,4 @@ export const Button = styled(Link)`
         color: ${({dark}) => (dark ? 'black' : '#fff')};
     };
 `
+
