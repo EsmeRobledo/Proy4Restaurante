@@ -89,11 +89,10 @@ export const Form = styled.form`
 export const FormH1 = styled.h1`
   margin-bottom: 20px;
   color: #fff;
-  font-size: 14px;
+  font-size: 28px;
   font-weight: 100;
   text-align: center;
 `
-
 export const FormLabel = styled.label`
   margin-bottom: 5px;
   font-size: 12px;
@@ -111,13 +110,13 @@ export const FormInput =styled.input`
 export const FormButtom = styled.button`
   background: red;
   color: white;
-  font-size: 18 px;
+  font-size: 16 px;
   padding: 12px 20px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
   float: right;
-  width: 40%;
+  width: 100%;
   
   :hover {
     background-color: #E57373;
@@ -129,15 +128,4 @@ export const Text = styled.span`
   margin-top: 24px;
   color: #fff;
   font-size: 14px;
-`
-
-export const ListReservationWrapp = styled.div`
-    max-width: 555px;
-    height: 100%;   
-`
-
-export const ImgList = styled.img`
-    width: 100%;
-    margin: 0 0 10px 0;
-    padding: 10px;  
 `

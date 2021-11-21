@@ -1,8 +1,12 @@
 import React from 'react'
-import { Card, Table, Button } from 'react-bootstrap'
-const ReservationList = ({reservations, setEdit, updateId, setFormData}) => {
+import { Card, Table } from 'react-bootstrap'
+import { RiCloseCircleLine } from 'react-icons/ri';
+import { TiDelete, TiEdit } from 'react-icons/ti';
+
+const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet, deleteId}) => {
     const handleClick = (values) => {
         updateId(values.id)
+        deleteId(values.id)
         setFormData({
             nombre: values.nombre,
             apellido: values.apellido,
@@ -15,13 +19,15 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData}) => {
         setEdit();
     }
 
+    const handleClickE = (values) => {
+        deleteId(values.id)
+        setDelet();
+    }
+
     
     return (
-        <Card style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto' }}>
-        <h1>Lista</h1>
-        <br />
-
-        <Table striped bordered hover>
+        <Card className="reservation-card" style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'white' }}>
+        <Table striped bordered hover className="reservation-table">
             <thead>
                 <tr>
                     <th>Nombre</th>
@@ -29,7 +35,7 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData}) => {
                     <th>E-Mail</th>
                     <th>Fecha</th>
                     <th>Hora</th>
-                    <th>Numero de Personas</th>
+                    <th>No. Personas</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,8 +48,8 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData}) => {
                         <td>{reserva.hora}</td>
                         <td>{reserva.nopersonas}</td>
                         <td>
-                            <Button variant="warning" onClick={() => handleClick(reserva)}>Editar</Button> {/* Creamos una función que ejecuta handleClick */}
-                            <Button variant="danger">Eliminar</Button>
+                            <TiEdit variant="warning" onClick={() => handleClick(reserva)} className='edit-icon'/> 
+                            <TiDelete onClick={() => handleClickE(reserva)} className='delete-icon' />
                         </td>
                     </tr>
                 ))}

@@ -78,7 +78,7 @@ export const NavLinks = styled(LinkS)`
     text-decoration: none;
     padding: 0 1rem;
     height: 100%;
-    cursor: poiter;
+    cursor: pointer;
 
     &.active{
        /*Cambiara el color de la linea inferior al momento de activar el menu seleccionado*/

@@ -4,3 +4,47 @@
     padding: 0;
     font-family: 'Ubuntu', sans-serif;
 }
+
+ .reservation-table{
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid black;
+ }  
+  
+ .reservation-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: hsla(0, 64%, 67%, 0.945);
+    color: white;
+    
+  }
+
+  .reservation-table td {
+    background: black;
+    padding: 8px;
+    color: white;
+    border: 1px solid black;
+  }
+
+  .delete-icon {
+    margin-right: 5px;
+    color: #fff;
+    cursor: poiter;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+  
+  .edit-icon {
+    color: #fff;
+    cursor: poiter;
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+  }
+
+
+  .icons {
+    
+    cursor: pointer;
+  }

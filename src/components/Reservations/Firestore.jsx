@@ -13,8 +13,6 @@ import {
 } from 'firebase/firestore';
 
 const Firestore = () => {
-    const refDoc = doc(db, 'reservations', 'uXUEn900melebo6TY6M5')
-    console.log(refDoc)
     const [edit, setEdit] = useState(false)
     const [id, setId] = useState('')
     const [reservas, setReservation] = useState([]);
@@ -41,7 +39,6 @@ const Firestore = () => {
     }
 
     const onSave = (values) => {
-        console.log('valores es igual a:' + values);
         addDoc(collection(db, 'reservations'), values);
         alert('Su reservacion se ha agendado satisfactoriamente');
     }
