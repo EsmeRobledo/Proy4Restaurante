@@ -5,6 +5,7 @@ import {Nav, NavbarContainer, NavLogo,
     NavMenu, NavItem, NavLinks, NavBtn, NavBtnLink, NavLinksR} from "./NavbarElemnts"
     import { FaBars } from 'react-icons/fa'
 
+
    
 
 
@@ -42,7 +43,7 @@ function Navigation({toggle,productData}){
                             <NavLinks to='Services' smooth={true} duration={500} spy={true} exact='true' offset={-60}>Servicios</NavLinks>
                        </NavItem>
                        <NavItem>
-                            <NavLinksR to='/reservaciones'>Reservaciones</NavLinksR>
+                            <NavLinksR to='/reservaciones' >Reservaciones</NavLinksR>
                        </NavItem>
                        <NavItem>
                             <NavLinksR to='/signup'>Sing up</NavLinksR>

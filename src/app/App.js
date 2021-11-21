@@ -4,7 +4,7 @@ import { Switch } from 'react-router';
 import Home from '../pages/Home';
 import Signin from '../pages/Signin';
 import Menu from '../components/Menu/Menu';
-import Reservations from '../components/Reservations/Reservations';
+import Firestore from '../components/Reservations/Firestore'
 import Signup from '../components/Signup/Signup';
 
 
@@ -16,7 +16,7 @@ function App() {
        <Route path="/" component={Home} exact />
        <Route path="/signin" component={Signin} exact />
        <Route path="/menu"  component={Menu} exact  />
-       <Route path="/reservaciones" component={Reservations} exact />
+       <Route path="/reservaciones" component={Firestore} exact />
        <Route path="/signup" component={Signup} exact />
      </Switch>
     </Router>
