@@ -3,13 +3,12 @@ import {Container,FormWrap,Icon, FormContent, FormH1,
         Text, FormInput, FormButtom, FormLabel, Form }  from '../Reservations/ReservationsElements'
 import { Column1, Column2 } from '../Aboutus/AboutusElement'
 import ReservationList from './ReservationList';
-import {setDoc, collection, onSnapshot,  doc, addDoc} from 'firebase/firestore';
+import {setDoc, collection, onSnapshot,  doc, addDoc, deleteDoc} from 'firebase/firestore';
 import { db} from '../service/firebase';
 
 
 const Reservations= () => {
     const [edit, setEdit] = useState(false)
-    const [delet, setDelet] = useState(false)
     const [id, setId] = useState('')
     const [reservas, setReservation] = useState([]);
     const [formData, setFormData] = useState({
@@ -23,11 +22,8 @@ const Reservations= () => {
     });
 
     const updateEdit = (value) => setEdit(value);
-    const updatedelet = (value) => setDelet(value);
-
     const updateId = (id) => setId(id);
-    const deleteId = (id) => setId(id);
-
+    
     const onUpdate = async (id, values) => {
         if (window.confirm('Aceptar?')) {
             await setDoc(doc(db, 'reservations', id), values)
@@ -36,13 +32,15 @@ const Reservations= () => {
         updateEdit(false)
     }
 
-    const removeReserva = async (id, values) => {
-       //delete(doc(db, 'reservations', id), values)
-      // db.database().ref(`reservations`).remove();
-       //reservas.filter(values => values.id !== id);
-       alert('Se ha Eliminado la Reserva');
-       updatedelet(false)
-       setReservation(reservas)
+    const onDelete = async (id) => {
+        //Preguntamos si está seguro de eliminar
+        if (window.confirm('Estas seguro de Eliminar la Reservacion?')) {
+            //Llamamos el método de firebase
+            console.log('El id para eliminar es el: '+id)
+            await deleteDoc(doc(db, 'pelicula', id));
+            alert('Se eliminó satisfactoriamente');
+        }
+        updateEdit(false)
     }
 
     const onSave = (values) => {
@@ -54,7 +52,6 @@ const Reservations= () => {
         onSnapshot(collection(db, 'reservations'), (snapshot) => {
             const reservas = [];
             snapshot.forEach(doc => reservas.push({ ...doc.data(), id: doc.id }));
-            console.log(reservas)
             setReservation(reservas)
         })
     }
@@ -66,8 +63,6 @@ const Reservations= () => {
         e.preventDefault();
         if (edit) {
             onUpdate(id, formData)
-        }if(delet){
-            removeReserva(id, formData)
         } else {
             onSave(formData)
         }
@@ -133,8 +128,8 @@ const Reservations= () => {
                                     setEdit={() => updateEdit(true)}
                                     updateId={updateId}
                                     setFormData={setFormData}
-                                    setDelet={() => updatedelet(true)}
-                                    deleteId={deleteId}
+                                    onDelete={onDelete}
+                                    
                                 />
                        </Column2>
                    </FormContent>

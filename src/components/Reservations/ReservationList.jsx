@@ -2,10 +2,10 @@ import React from 'react'
 import { Card, Table } from 'react-bootstrap'
 import { TiDelete, TiEdit } from 'react-icons/ti';
 
-const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet, deleteId}) => {
+const ReservationList = ({reservations, setEdit, updateId, setFormData, onDelete}) => {
     const handleClick = (values) => {
         updateId(values.id)
-        deleteId(values.id)
+       
         setFormData({
             nombre: values.nombre,
             apellido: values.apellido,
@@ -17,13 +17,6 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet
         });
         setEdit();
     }
-
-    const clickHandler = (values) => {
-        deleteId(values.id)
-        //values.deleteData(values.data[values.id]);
-        setDelet();
-    }
-
     
     return (
         <Card className="reservation-card" style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'white' }}>
@@ -49,7 +42,7 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData, setDelet
                         <td>{reserva.nopersonas}</td>
                         <td>
                             <TiEdit variant="warning" onClick={() => handleClick(reserva)} className='edit-icon'/> 
-                            <TiDelete variant="warning" onClick={() => clickHandler(reserva)} className='delete-icon' />
+                            <TiDelete variant="warning" onClick={()=>onDelete(reserva.id)} className='delete-icon' />
                         </td>
                     </tr>
                 ))}
