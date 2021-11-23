@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card, Table } from 'react-bootstrap'
 import { TiDelete, TiEdit } from 'react-icons/ti';
+import {TableReservations, TabletheadReserv, TabletdReserv, TablethReserv, 
+    TabletrReserv, TabletbodyReserv} from '../Reservations/ReservationsElements'
 
 const ReservationList = ({reservations, setEdit, updateId, setFormData, onDelete}) => {
     const handleClick = (values) => {
@@ -19,36 +20,34 @@ const ReservationList = ({reservations, setEdit, updateId, setFormData, onDelete
     }
     
     return (
-        <Card className="reservation-card" style={{ width: '50%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: 'white' }}>
-        <Table striped bordered hover className="reservation-table">
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Apellido</th>
-                    <th>E-Mail</th>
-                    <th>Fecha</th>
-                    <th>Hora</th>
-                    <th>No. Personas</th>
-                </tr>
-            </thead>
-            <tbody>
+        <TableReservations striped bordered hover >
+            <TabletheadReserv>
+                <TabletrReserv>
+                    <TablethReserv>Nombre</TablethReserv>
+                    <TablethReserv>Apellido</TablethReserv>
+                    <TablethReserv>E-Mail</TablethReserv>
+                    <TablethReserv>Fecha</TablethReserv>
+                    <TablethReserv>Hora</TablethReserv>
+                    <TablethReserv>No. Personas</TablethReserv>
+                </TabletrReserv>
+            </TabletheadReserv>
+            <TabletbodyReserv>
                 {reservations.map(reserva => (
-                    <tr key={reserva.id}>
-                        <td>{reserva.nombre}</td>
-                        <td>{reserva.apellido}</td>
-                        <td>{reserva.email}</td>
-                        <td>{reserva.fecha}</td>
-                        <td>{reserva.hora}</td>
-                        <td>{reserva.nopersonas}</td>
-                        <td>
+                    <TabletrReserv key={reserva.id}>
+                        <TabletdReserv>{reserva.nombre}</TabletdReserv>
+                        <TabletdReserv>{reserva.apellido}</TabletdReserv>
+                        <TabletdReserv>{reserva.email}</TabletdReserv>
+                        <TabletdReserv>{reserva.fecha}</TabletdReserv>
+                        <TabletdReserv>{reserva.hora}</TabletdReserv>
+                        <TabletdReserv>{reserva.nopersonas}</TabletdReserv>
+                        <TabletdReserv>
                             <TiEdit variant="warning" onClick={() => handleClick(reserva)} className='edit-icon'/> 
                             <TiDelete variant="warning" onClick={()=>onDelete(reserva.id)} className='delete-icon' />
-                        </td>
-                    </tr>
+                        </TabletdReserv>
+                    </TabletrReserv>
                 ))}
-            </tbody>
-        </Table>
-    </Card>
+            </TabletbodyReserv>
+        </TableReservations>
     )
 }
 export default ReservationList

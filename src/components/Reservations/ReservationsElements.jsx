@@ -64,16 +64,19 @@ export const FormContent = styled.div`
     grid-template-areas: 'col1 col2';
 
     @media screen and (max-width: 768px){
-        grid-template-areas: 'col1 col1' 'col2 col2';
+      grid-auto-columns: minmax(1fr);
+      align-items: center; 
+      grid-template-areas: 'col1 col1' 'col2 col2';
     }
-
-       
+        
 `
 
 export const Form = styled.form`
   background: Transparent;
+  grid-area: col1;
   max-width: 540px;
   z-index: 1;
+  grid-area: col1;
   display: grid;
   margin: 0 auto;
   padding: 60px 12px;
@@ -128,4 +131,76 @@ export const Text = styled.span`
   margin-top: 24px;
   color: #fff;
   font-size: 14px;
+`
+
+export const Column1 = styled.div`
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col1;
+`
+
+export const Column2 = styled.div`
+    padding: 0 15px;
+    max-width: 555px;
+  
+`
+export const ListWrap = styled.div`
+  max-width: 555px;
+  justify-content: center;
+
+  @media screen and (max-width: 480px){
+        height: 80%;
+    }
+`
+
+export const TableReservations = styled.table`
+    max-width: 555px; 
+    table-layout: fixed;
+    z-index: 2;
+    grid-area: col2;
+    display: grid;
+    margin: 0 auto;
+    font-size: 12px;
+   
+`
+
+export const TabletheadReserv = styled.thead`
+  vertical-align: middle;
+  font-size: 10px;
+  display: table;
+`
+
+export const TablethReserv = styled.th`
+  background: #de736f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  border: 1px solid #eee;
+  padding: 12px 15px;
+
+  &.last {
+    border-right: none;
+  }
+`
+
+export const TabletrReserv = styled.tr`
+    color: Black;
+    font-size: 14px;
+    
+    &:hover {
+      background: Transparent;
+      td {
+        color: #555;
+      }
+    }
+
+`
+export const TabletbodyReserv = styled.tbody`
+ vertical-align: middle;
+  display: table;
+`
+
+export const TabletdReserv = styled.td`
+  color: #999;
+  padding: 12px 15px;
 `

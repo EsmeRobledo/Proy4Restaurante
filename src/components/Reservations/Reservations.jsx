@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {Container,FormWrap,Icon, FormContent, FormH1, 
-        Text, FormInput, FormButtom, FormLabel, Form }  from '../Reservations/ReservationsElements'
-import { Column1, Column2 } from '../Aboutus/AboutusElement'
+        Text, FormInput, FormButtom, FormLabel, Form,Column1, Column2, ListWrap }  from '../Reservations/ReservationsElements'
 import ReservationList from './ReservationList';
 import {setDoc, collection, onSnapshot,  doc, addDoc, deleteDoc} from 'firebase/firestore';
 import { db} from '../service/firebase';
@@ -122,6 +121,7 @@ const Reservations= () => {
                             </Form>
                        </Column1>
                        <Column2>
+                            <ListWrap>   
                                 <FormH1>Datos de la reservacion</FormH1>
                                 <ReservationList
                                     reservations={reservas}
@@ -131,6 +131,7 @@ const Reservations= () => {
                                     onDelete={onDelete}
                                     
                                 />
+                            </ListWrap>    
                        </Column2>
                    </FormContent>
                 </FormWrap>

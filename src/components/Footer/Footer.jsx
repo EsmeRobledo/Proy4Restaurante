@@ -17,10 +17,10 @@ function Footer() {
                         <FooterLinksWrapper>
                             <FooterLinkItems>
                                 <FooterLinkTitle>En nuestro Sitio</FooterLinkTitle>
-                                    <FooterLink to="/reservations">Reservaciones</FooterLink>
-                                    <FooterLink to="/testimonials">Testimonios</FooterLink>
-                                    <FooterLink to="/galery">Galeria</FooterLink>
-                                    <FooterLink to="/menu">Menu</FooterLink>
+                                    <FooterLink to='/reservaciones'>Reservaciones</FooterLink>
+                                    <FooterLink to='/'>Testimonios</FooterLink>
+                                    <FooterLink to='galery'>Galeria</FooterLink>
+                                    <FooterLink to='/menu'>Menu</FooterLink>
                            </FooterLinkItems>
                        
                             <FooterLinkItems>

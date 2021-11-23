@@ -2,7 +2,7 @@ import React from "react";
 import { SidebarContainer, Icon, 
     CloseIcon, SidebarWrapper, 
     SidebarMenu, SidebarLink,
-    SideBtnWrap, SidebarRoute } from "./SidebarElemnts";
+    SideBtnWrap, SidebarRoute, SidebarLinkRoute } from "./SidebarElemnts";
 
 const Sidebar = ({isOpen, toggle}) =>{
     return(
@@ -12,11 +12,11 @@ const Sidebar = ({isOpen, toggle}) =>{
         </Icon>
         <SidebarWrapper>
             <SidebarMenu>
-                <SidebarLink to='about' onClick={toggle} > About us</SidebarLink>
-                <SidebarLink to='/menu' onClick={toggle} > Menu</SidebarLink>
-                <SidebarLink to='/reservaciones' onClick={toggle} > Menu</SidebarLink>
-                <SidebarLink to='services' onClick={toggle} > Services </SidebarLink>
-                <SidebarLink to='/Signup' onClick={toggle} > Sign up</SidebarLink>
+                <SidebarLink to='about' onClick={toggle} > Conocenos</SidebarLink>
+                <SidebarLinkRoute to='/menu' onClick={toggle} > Menu</SidebarLinkRoute>
+                <SidebarLinkRoute to='/reservaciones' onClick={toggle} > Reservaciones</SidebarLinkRoute>
+                <SidebarLink to='Services' onClick={toggle} > Nuestros Servicios </SidebarLink>
+                <SidebarLinkRoute to='/signup' onClick={toggle} > Sign up</SidebarLinkRoute>
             </SidebarMenu>
             <SideBtnWrap>
                 <SidebarRoute to='/signin'>Sign In</SidebarRoute>
