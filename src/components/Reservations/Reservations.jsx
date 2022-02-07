@@ -58,6 +58,8 @@ const Reservations= () => {
     useEffect(() => {
         getreservas();
     }, [])
+
+    
     const onSubmit = (e) => {
         e.preventDefault();
         if (edit) {
